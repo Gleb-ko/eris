@@ -2182,11 +2182,13 @@ declare namespace Eris {
   }
 
   export class Role extends Base {
+    botID?: string;
     color: number;
     createdAt: number;
     guild: Guild;
     hoist: boolean;
     id: string;
+    integrationID?: string;
     json: Partial<Record<Exclude<keyof Constants["Permissions"], "all" | "allGuild" | "allText" | "allVoice">, boolean>>;
     managed: boolean;
     mention: string;
@@ -2194,6 +2196,7 @@ declare namespace Eris {
     name: string;
     permissions: Permission;
     position: number;
+    premiumSubscriber: boolean;
     constructor(data: BaseData, guild: Guild);
     delete(reason?: string): Promise<void>;
     edit(options: RoleOptions, reason?: string): Promise<Role>;
