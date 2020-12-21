@@ -395,6 +395,7 @@ declare namespace Eris {
     content: string;
     editedTimestamp?: number;
     embeds: Embed[];
+    flags: Number;
     mentionedBy?: unknown;
     mentions: string[];
     pinned: boolean;
